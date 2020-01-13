@@ -1,0 +1,54 @@
+
+
+    /setConfiguration: 
+        displayName: SetConfiguration Resource
+        description: SetConfiguration Resource
+        post: 
+            description: SetConfiguration
+            body: 
+              application/json:
+                schema: |
+                  {
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "offer": {
+                            "type": "string"
+                          },
+                          "adresseMac": {
+                            "type": "string"
+                          },
+                          "nd": {
+                            "type": "string"
+                          },
+                          "action": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "offer",
+                          "adresseMac",
+                          "nd",
+                          "action"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "data"   
+                    ]
+                  }
+                example: |
+                  {
+                    "offer": "",
+                    "adresseMac": "",
+                    "nd": "",
+                    "action": ""
+                  }
+            responses: 
+                200: 
+                    description: Successful Response
+                    body: 
+                        application/json: 
